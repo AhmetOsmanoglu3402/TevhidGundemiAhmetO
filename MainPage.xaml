@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TevhidGundemiMobile.MainPage">
+    <Shell.TitleView>
+        <VerticalStackLayout  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Label HorizontalOptions="Center" Text="TEVHİDİ GÜNDEM" TextColor="#00b4d5" Margin="5" FontAttributes="Bold" FontSize="Title" />
+        </VerticalStackLayout>
+    </Shell.TitleView>
+    <VerticalStackLayout>
+        <!--Haber kategorileri başlangıç-->
+        <ScrollView Orientation="Horizontal">
+            <HorizontalStackLayout BackgroundColor="#00b4d5">
+                <VerticalStackLayout Margin="10,5,10,5">
+                    <Image WidthRequest="45" Source="home.png"></Image>
+                    <Label Text="Anasayfa" TextColor="#FFF" FontAttributes="Bold"></Label>
+                </VerticalStackLayout>
+                <VerticalStackLayout Margin="10,5,10,5">
+                    <Image WidthRequest="45"  Source="earth.png"></Image>
+                    <Label Text="Dünya"  TextColor="#FFF" FontAttributes="Bold"></Label>
+                </VerticalStackLayout>
+                <VerticalStackLayout Margin="10,5,10,5">
+                    <Image WidthRequest="45"  Source="politics.png"></Image>
+                    <Label Text="Siyaset" TextColor="#FFF" FontAttributes="Bold"></Label>
+                </VerticalStackLayout>
+                <VerticalStackLayout Margin="10,5,10,5">
+                    <Image WidthRequest="45"  Source="economy.png"></Image>
+                    <Label Text="Ekonomi" TextColor="#FFF" FontAttributes="Bold"></Label>
+                </VerticalStackLayout>
+                <VerticalStackLayout Margin="10,5,10,5">
+                    <Image WidthRequest="45"  Source="category_earth.png"></Image>
+                    <Label Text="Ekonomi" TextColor="#FFF" FontAttributes="Bold"></Label>
+                </VerticalStackLayout>
+                <VerticalStackLayout Margin="10,5,10,5">
+                    <Image WidthRequest="45"  Source="category_earth.png"></Image>
+                    <Label Text="Ekonomi" TextColor="#FFF" FontAttributes="Bold"></Label>
+                </VerticalStackLayout>
+                <VerticalStackLayout Margin="10,5,10,5">
+                    <Image WidthRequest="45"  Source="category_earth.png"></Image>
+                    <Label Text="Ekonomi" TextColor="#FFF" FontAttributes="Bold"></Label>
+                </VerticalStackLayout>
+                <VerticalStackLayout Margin="10,5,10,5">
+                    <Image WidthRequest="45"  Source="category_earth.png"></Image>
+                    <Label Text="Ekonomi" TextColor="#FFF" FontAttributes="Bold"></Label>
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+        </ScrollView>
+        <!--Haber kategorileri bitiş-->
+        <!-- Haber listesi başlangıç-->
+        <ScrollView>
+            <VerticalStackLayout
+            Spacing="25"
+            Padding="10"
+            VerticalOptions="Center"
+            x:Name="vsLayout">
+                <ListView x:Name="listViewNews" SelectionMode="None" HeightRequest="2000">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <VerticalStackLayout>
+                                    <Frame CornerRadius="10" Padding="0">
+                                        <Image Source="{Binding ImageURL}" />
+                                    </Frame>
+                                    <Label Text="{Binding Title}" FontSize="Title" FontAttributes="Bold" />
+                                    <Label Text="{Binding Description}" FontSize="Subtitle" />
+                                </VerticalStackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </VerticalStackLayout>
+        </ScrollView>
+        <!-- Haber listesi bitiş-->
+    </VerticalStackLayout>
+
+</ContentPage>
