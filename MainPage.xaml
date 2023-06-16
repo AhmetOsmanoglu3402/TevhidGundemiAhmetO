@@ -72,5 +72,6 @@
         </ScrollView>
         <!-- Haber listesi bitiş-->
     </VerticalStackLayout>
+	<Label>Eklenti Yazı</Label>
 
 </ContentPage>
